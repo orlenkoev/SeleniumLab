@@ -17,7 +17,7 @@
                     <configuration>
                         <testFailureIgnore>true</testFailureIgnore>
                         <suiteXmlFiles>
-                            <suiteXmlFile>tasks.xml</suiteXmlFile>
+                            <xmlFile>src/test/resources/suites/tasks.xml</xmlFile>
                         </suiteXmlFiles>
                     </configuration>
                 </plugin>

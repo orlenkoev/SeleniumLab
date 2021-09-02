@@ -1,14 +1,10 @@
-import io.github.bonigarcia.wdm.WebDriverManager;
+package tests;
+
 import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-
-import java.util.concurrent.TimeUnit;
 
 public class T6_MultiSelectListDemoTest extends BaseTest {
     //        Click on the "Input Forms"
