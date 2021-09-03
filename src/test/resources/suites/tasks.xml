@@ -1,11 +1,23 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 
-<suite name="Suite1" verbose="1" >
+<suite name="Suite1" verbose="1">
 
     <test name="Regression1">
         <classes>
-        <class name="tests.T1_TheCorrectEnteredTextTest"/>
-        <class name="tests.T2_TheCorrectSumOfNumbersTest"/>
+            <class name="tests.BaseTest"/>
+            <class name="tests.T1_TheCorrectEnteredTextTest"/>
+            <class name="tests.T2_TheCorrectSumOfNumbersTest"/>
+            <class name="tests.T3_CorrectWorkOfCheckboxTest"/>
+            <class name="tests.T4_CorrectOfSelectedAgeSexTest"/>
+            <class name="tests.T5_TextAppearsAfterDaySelectedTest"/>
+            <class name="tests.T6_MultiSelectListDemoTest"/>
+            <class name="tests.T7_EmptyFieldHighlightedTest"/>
+            <class name="tests.T8_SelectYesterdayDateTest"/>
+            <class name="tests.T9_FilterDataSearchTest"/>
+            <class name="tests.T11_TextAfterCancelAppearsTest"/>
+            <class name="tests.T12_MoveElementTest"/>
+            <class name="tests.T14_JQueryListBoxTest"/>
+            <class name="tests.T15_UserDataIsDisplayedTest"/>
         </classes>
     </test>
 </suite>
