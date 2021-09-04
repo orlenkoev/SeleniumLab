@@ -11,6 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 
 import java.util.concurrent.TimeUnit;
 
@@ -18,10 +19,10 @@ public class BaseTest {
     WebDriver driver;
     WebDriverWait wait;
 
-    @BeforeClass
+    @BeforeMethod
     public void startWorks() {
-        WebDriverManager.firefoxdriver().setup();
-        driver = new FirefoxDriver();
+        WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         wait = new WebDriverWait(driver, 10);
@@ -36,7 +37,7 @@ public class BaseTest {
 
     }
 
-    @AfterClass
+    @AfterMethod
     public void quitDriver() {
         driver.quit();
     }
