@@ -25,6 +25,10 @@ public class BaseTest {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
 
+        ChromeOptions chromeOptions= new ChromeOptions();
+        chromeOptions.setBinary("C:\\Users\\User\\AppData\\Local\\Google\\Chrome\\Application.exe");
+        ChromeDriver driver = new ChromeDriver(chromeOptions);
+
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         wait = new WebDriverWait(driver, 10);
