@@ -24,9 +24,9 @@ public class BaseTest {
     public void startWorks() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
-
         ChromeOptions chromeOptions= new ChromeOptions();
-        chromeOptions.setBinary("C:\\Users\\User\\AppData\\Local\\Google\\Chrome\\Application.exe");
+        chromeOptions.setBinary("C:\\Users\\User\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe");
+
         ChromeDriver driver = new ChromeDriver(chromeOptions);
 
         driver.manage().window().maximize();
