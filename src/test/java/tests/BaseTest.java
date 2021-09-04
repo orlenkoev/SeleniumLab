@@ -22,10 +22,9 @@ public class BaseTest {
 
     @BeforeMethod
     public void startWorks() {
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("headless");
+        WebDriverManager.firefoxdriver().setup();
+        driver = new FirefoxDriver();
+
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         wait = new WebDriverWait(driver, 10);
@@ -40,7 +39,7 @@ public class BaseTest {
 
     }
 
-    @AfterMethod
+    @AfterMethod(alwaysRun = true)
     public void quitDriver() {
         driver.quit();
     }
