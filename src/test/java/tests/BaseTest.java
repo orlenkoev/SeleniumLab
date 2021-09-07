@@ -21,11 +21,13 @@ public class BaseTest {
     WebDriverWait wait;
 
     @BeforeMethod
-    public void startWorks() {
-        WebDriverManager.chromedriver().setup();
+    public void startOfWork() {
+//        WebDriverManager.chromedriver().setup();
+        System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\src\\test\\resources\\rivers\\chromedriver.exe");
+
         driver = new ChromeDriver();
-        ChromeOptions chromeOptions= new ChromeOptions();
-        chromeOptions.setBinary("C:\\Users\\User\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe");
+        ChromeOptions chromeOptions = new ChromeOptions();
+//        chromeOptions.setBinary("\\src\\test\\resources\\rivers\\chromedriver.exe");
 
         ChromeDriver driver = new ChromeDriver(chromeOptions);
 
