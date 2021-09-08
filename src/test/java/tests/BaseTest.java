@@ -23,7 +23,7 @@ public class BaseTest {
     @BeforeMethod
     public void startOfWork() {
 //        WebDriverManager.chromedriver().setup();
-        System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\src\\test\\resources\\rivers\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\src\\test\\resources\\rivers\\chromedriver.exe");
 
         driver = new ChromeDriver();
         ChromeOptions chromeOptions = new ChromeOptions();
